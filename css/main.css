@@ -11,8 +11,14 @@ ul {
 .fleft {float:left;}
 .fright {float:right;}
 
-.cat-area {
+.cat-area,
+.cat-area--knockout {
 	margin: 100px 0 0 450px;
 	border: 1px solid black;
 	padding:50px;
+}
+
+.cat-area--knockout {
+	margin:50px 0;
+	width:400px;
 }
