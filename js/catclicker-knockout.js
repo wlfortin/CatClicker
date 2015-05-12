@@ -10,31 +10,31 @@ var catModel = {
 		name:"Peanut",
 		clickCount: 0,
 		imgSrc: "http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg",
-		nicknames: []
+		nicknames: ["Peety", "Sweet Pea", "P-Diddy"]
 	},
 	{
 		name:"Snippet",
 		clickCount: 0,
 		imgSrc: "http://placekitten.com.s3.amazonaws.com/homepage-samples/96/140.jpg",
-		nicknames: []
+		nicknames: ["Snips", "Snippy", "Ms. Snippy Snip"]
 	},
 	{
 		name:"Chartruese",
 		clickCount: 0,
 		imgSrc: "http://placekitten.com.s3.amazonaws.com/homepage-samples/200/287.jpg",
-		nicknames: []
+		nicknames: ["Truese Le Mousse", "Fluffy Butt"]
 	},
 	{
 		name:"Yogi",
 		clickCount: 0,
 		imgSrc: "http://placekitten.com.s3.amazonaws.com/homepage-samples/200/286.jpg",
-		nicknames: []
+		nicknames: ["Yarn Bandit", "Mr. Bojangles", "Waylon", "Bubba"]
 	},
 	{
 		name:"Zazzles",
 		clickCount: 0,
 		imgSrc: "http://placekitten.com.s3.amazonaws.com/homepage-samples/96/139.jpg",
-		nicknames: []
+		nicknames: ["Z-Man", "Zazz-a-frass", "Zazz-ma-tazz", "Snazzy Pants"]
 	}]
 };
 
@@ -69,6 +69,11 @@ var viewModel = function() {
 	this.incrementCounter = function() {
 		self.currentCat().clickCount(self.currentCat().clickCount() + 1);
 	};
+
+	this.updateCat = function(cat) {
+		//console.log(cat);
+		self.currentCat(cat);
+	}
 };
 
 ko.applyBindings(new viewModel());

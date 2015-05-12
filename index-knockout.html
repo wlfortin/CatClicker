@@ -6,19 +6,28 @@
 
 	<h1>Cat Clicker Knockout!</h1>
 
-	<div class="cat-area--knockout" data-bind="with: currentCat">
-		<h2 class="cat-area__name" data-bind="text: name"></h2>
-		<img class="cat-area__image clickable" src="" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}" />
-		<div data-bind="text: level"></div>
-		<div class="cat-area__counter">Number of clicks: <span data-bind="text: clickCount"></span></div>
+	<div class="fleft">
+		<div class="cat-area--knockout" data-bind="with: currentCat">
+			<h2 class="cat-area__name" data-bind="text: name"></h2>
+			<img class="cat-area__image clickable" src="" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}" />
+			<div data-bind="text: level"></div>
+			<div class="cat-area__counter">Number of clicks: <span data-bind="text: clickCount"></span></div>
+		</div>
+
+		<div>
+			<h2>Nicknames:</h2>
+			<ul data-bind="foreach: currentCat().nicknames">
+				<li data-bind="text: $data"></li>
+			</ul>
+		</div>
 	</div>
 
-	<div>
-		<h2>Nicknames:</h2>
-		<ul data-bind="foreach: currentCat().nicknames">
-			<li data-bind="text: $data"></li>
+	<div class="fleft cat-list--knockout">
+		<ul data-bind="foreach: catList">
+			<li><h2><a href="javascript:void(0);" data-bind="click: $parent.updateCat, text: name"></a></h2><img src="" data-bind="attr: {src: imgSrc}"></li>
 		</ul>
 	</div>
+
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
 	<script src="js/catclicker-knockout.js"></script>
