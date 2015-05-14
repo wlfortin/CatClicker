@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>New Doc</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<ul>
+			<li>what is a closure good for
+
+		<script>
+			$(function() {
+				var View = {
+					init: funciton() {
+
+					}
+				};
+
+				var Model = {
+
+				};
+
+				var Controller = {
+					init: function() {
+						View.init();
+					}
+				};
+
+				Controller.init();
+			});
+
+			function setAlarm(message, time) {
+				function handleAlarm() {
+					alert(message);
+				}
+
+				setTimeout(handleAlarm, time);
+			}
+
+			setAlarm("Time to wake up!", 60);
+
+			var x = "1|3|5|7|11";
+			var y = x.split("|").join("|");
+		</script>
+	</body>
+</html>
